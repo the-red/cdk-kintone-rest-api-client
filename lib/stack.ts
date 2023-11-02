@@ -7,8 +7,8 @@ export class KintoneRestApiClientStack extends Stack {
     super(scope, id, props);
 
     new NodejsFunction(this, 'lambda', {
-      runtime: Runtime.NODEJS_18_X,
-      architecture: Architecture.ARM_64,
+      runtime: Runtime.NODEJS_18_X, // NODEJS_16_X でも同じエラー発生
+      architecture: Architecture.ARM_64, // X86_64 でも同じエラー発生
       handler: 'handler',
       entry: 'lambda/index.ts',
       functionName: 'kintone-rest-api-client-function',
