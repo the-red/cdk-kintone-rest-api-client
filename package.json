@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "cdk": "cdk -c profile=test",
+    "synth": "npm run cdk synth",
+    "dev": "npm run cdk watch",
+    "diff": "npm run cdk diff",
+    "deploy": "npm run cdk deploy"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.114",
+    "@types/node": "20.4.0",
+    "aws-cdk": "^2.81.0",
+    "esbuild": "^0.18.11",
+    "prettier": "^3.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "~5.1.6"
+  },
+  "dependencies": {
+    "@kintone/rest-api-client": "^5.0.3",
+    "aws-cdk-lib": "^2.84.0",
+    "constructs": "^10.0.0",
+    "dotenv": "^16.0.3"
+  }
+}
